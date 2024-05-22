@@ -16,9 +16,19 @@ body {
   overflow-x: hidden;
 }
 
+.icon {
+  cursor: pointer;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (min-width: 640px) {
+  #menu_icon {
+    display: none;
+  }
 }
