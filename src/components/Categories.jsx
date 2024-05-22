@@ -21,13 +21,15 @@ function Categories({ isVisible }) {
     <nav>
       <Flex
         as="ul"
-        px={['2rem', '3rem', '4rem']}
-        py="2rem"
-        gap="2rem"
+        bgColor={'gray.800'}
+        px={{ base: '2rem', sm: '4rem', xl: '8rem' }}
+        py="1.5rem"
+        gap={{ base: '2rem', sm: '4rem', xl: '8rem' }}
+        color={'white'}
         listStyleType="none"
         direction={['column', 'column', 'row']}
-        justifyContent="space-between"
-        fontSize="1.8rem"
+        justifyContent="flex-start"
+        fontSize="1.6rem"
         align={'center'}
         display={[
           isVisible ? 'flex' : 'none',

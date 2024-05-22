@@ -1,4 +1,4 @@
-import { Container, Flex, Link } from '@chakra-ui/react';
+import { Box, Flex, Link } from '@chakra-ui/react';
 import { FaCartShopping, FaUser } from 'react-icons/fa6';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import Categories from './Categories';
@@ -8,7 +8,7 @@ function Header() {
   const [isCategoriesVisible, setIsCategoriesVisible] = useState(false);
 
   return (
-    <Container
+    <Box
       as="header"
       bg="gray.100"
       width="100%"
@@ -18,8 +18,8 @@ function Header() {
     >
       <Flex
         width="100%"
-        px={['2rem', '3rem', '4rem']}
-        py={{ base: '2rem', sm: '2.5rem' }}
+        px={{ base: '2rem', sm: '4rem', xl: '8rem' }}
+        py={{ base: '2rem', sm: '3rem', xl: '4rem' }}
         justify="space-between"
         align="center"
       >
@@ -49,7 +49,7 @@ function Header() {
         </Flex>
       </Flex>
       <Categories isVisible={isCategoriesVisible} />
-    </Container>
+    </Box>
   );
 }
 

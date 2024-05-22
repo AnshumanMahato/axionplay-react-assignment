@@ -1,33 +1,32 @@
 import PropTypes from 'prop-types';
-import {
-  Box,
-  Image,
-  Badge,
-  Text,
-  VStack,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, Image, Badge, Text, VStack } from '@chakra-ui/react';
 
 const ProductCard = ({ image, name, price, discount }) => {
   const finalPrice = price - (price * discount) / 100;
-  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <Box
-      maxW={isMobile ? 'xs' : 'sm'}
+      maxW={{ base: '80%' }}
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
       p="5"
+      cursor="pointer"
+      maxWidth="250px"
+      w="100%"
     >
-      <Image src={image} alt={name} />
+      <Image src={image} alt={name} w={'100%'} />
 
       <VStack align="start" mt="4">
-        <Text fontWeight="bold" fontSize="xl">
+        <Text fontWeight="bold" fontSize="2.4rem">
           {name}
         </Text>
-        <Text fontSize="md">Price: ${finalPrice.toFixed(2)}</Text>
-        {discount > 0 && <Badge colorScheme="green">{discount}% off</Badge>}
+        <Text fontSize="1.8rem">Price: ${finalPrice.toFixed(2)}</Text>
+        {discount > 0 && (
+          <Badge fontSize="1.4rem" colorScheme="green">
+            {discount}% off
+          </Badge>
+        )}
       </VStack>
     </Box>
   );
