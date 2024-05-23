@@ -1,7 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import ProductCard from '../components/ProductCard';
 import { useCallback, useMemo, useState } from 'react';
-import Pagination from '../components/Pgination';
+import Pagination from '../components/Pagination';
+import { Link } from 'react-router-dom';
 
 function Catalogue() {
   const products = [
@@ -51,7 +52,13 @@ function Catalogue() {
   }, [currPage, totalPages]);
 
   return (
-    <Flex as="main" w="100%" direction="column" gap="2rem">
+    <Flex
+      as="main"
+      w="100%"
+      direction="column"
+      gap="2rem"
+      pb={{ base: '2rem', sm: '3rem', xl: '4rem' }}
+    >
       <Flex
         px={{ base: '2rem', sm: '4rem', xl: '8rem' }}
         py={{ base: '2rem', sm: '3rem', xl: '4rem' }}
@@ -61,13 +68,14 @@ function Catalogue() {
         w="100%"
       >
         {products.slice(start, end).map((product) => (
-          <ProductCard
-            key={product.id}
-            image={product.image}
-            name={product.name}
-            price={product.price}
-            discount={product.discount}
-          />
+          <Link key={product.id} to="/product/test">
+            <ProductCard
+              image={product.image}
+              name={product.name}
+              price={product.price}
+              discount={product.discount}
+            />
+          </Link>
         ))}
       </Flex>
       <Pagination
