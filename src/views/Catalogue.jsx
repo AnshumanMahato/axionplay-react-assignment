@@ -1,5 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import ProductCard from '../components/ProductCard';
+import { useCallback, useMemo, useState } from 'react';
+import Pagination from '../components/Pgination';
 
 function Catalogue() {
   const products = [
@@ -28,25 +30,52 @@ function Catalogue() {
     })),
   ];
 
+  const perPage = 12;
+  const [currPage, setCurrPage] = useState(1);
+
+  const { start, end, totalPages } = useMemo(() => {
+    const start = (currPage - 1) * perPage;
+    const end = currPage * perPage;
+    const totalPages = Math.ceil(products.length / perPage);
+    return { start, end, totalPages };
+  }, [currPage, products.length, perPage]);
+
+  const handlePrevClick = useCallback(() => {
+    if (currPage === 1) setCurrPage(totalPages);
+    else setCurrPage((curr) => curr - 1);
+  }, [currPage, totalPages]);
+
+  const handleNextClick = useCallback(() => {
+    if (currPage === totalPages) setCurrPage(1);
+    else setCurrPage((curr) => curr + 1);
+  }, [currPage, totalPages]);
+
   return (
-    <Flex
-      as="main"
-      px={{ base: '2rem', sm: '4rem', xl: '8rem' }}
-      py={{ base: '2rem', sm: '3rem', xl: '4rem' }}
-      wrap="wrap"
-      justify="center"
-      gap={{ base: '2rem', sm: '4rem', xl: '8rem' }}
-      w="100%"
-    >
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          image={product.image}
-          name={product.name}
-          price={product.price}
-          discount={product.discount}
-        />
-      ))}
+    <Flex as="main" w="100%" direction="column" gap="2rem">
+      <Flex
+        px={{ base: '2rem', sm: '4rem', xl: '8rem' }}
+        py={{ base: '2rem', sm: '3rem', xl: '4rem' }}
+        wrap="wrap"
+        justify="center"
+        gap={{ base: '2rem', sm: '4rem', xl: '8rem' }}
+        w="100%"
+      >
+        {products.slice(start, end).map((product) => (
+          <ProductCard
+            key={product.id}
+            image={product.image}
+            name={product.name}
+            price={product.price}
+            discount={product.discount}
+          />
+        ))}
+      </Flex>
+      <Pagination
+        currPage={currPage}
+        totalPages={totalPages}
+        onPrev={handlePrevClick}
+        onNext={handleNextClick}
+      />
     </Flex>
   );
 }
