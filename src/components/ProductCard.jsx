@@ -18,10 +18,10 @@ const ProductCard = ({ image, name, price, discount }) => {
       <Image src={image} alt={name} w={'100%'} />
 
       <VStack align="start" mt="4">
-        <Text fontWeight="bold" fontSize="2.4rem">
+        <Text fontWeight="bold" fontSize="2rem">
           {name}
         </Text>
-        <Text fontSize="1.8rem">Price: ${finalPrice.toFixed(2)}</Text>
+        <Text fontSize="1.6rem">Price: ${finalPrice.toFixed(2)}</Text>
         {discount > 0 && (
           <Badge fontSize="1.4rem" colorScheme="green">
             {discount}% off
