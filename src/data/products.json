@@ -1,15 +1,137 @@
 [
   {
-    "name": "Dell P2722H 27 Inch, FHD Monitor",
-    "price": 17999,
-    "discount": 20,
-    "category": "monitor",
+    "name": "Small Granite Car",
+    "price": "137.00",
+    "discount": 30,
+    "category": "Electronics",
+    "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "ratings": 3.3,
     "images": [
-      "https://images-na.ssl-images-amazon.com/images/I/71J9Vv6h9SL._SL1500_.jpg",
-      "https://images-na.ssl-images-amazon.com/images/I/71J9Vv6h9SL._SL1500_.jpg",
-      "https://images-na.ssl-images-amazon.com/images/I/71J9Vv6h9SL._SL1500_.jpg"
-    ],
-    "description": "27-inch FHD (1920 x 1080) resolution, IPS technology, 178°/178° viewing angle, 16:9 aspect ratio, 1000:1 contrast ratio, 300 cd/m² brightness, 8 ms response time, 60 Hz refresh rate, 16.7 million colors, 72% NTSC color gamut, 178°/178° viewing angle, 16:9 aspect ratio, 1000:1 contrast ratio, 300 cd/m² brightness, 8 ms response time, 60 Hz refresh rate, 16.7 million colors, 72% NTSC color gamut",
-    "ratings": 4.5
+      "https://source.unsplash.com/200x300/?Small",
+      "https://source.unsplash.com/200x300/?Small",
+      "https://source.unsplash.com/200x300/?Small"
+    ]
+  },
+  {
+    "name": "Awesome Steel Table",
+    "price": "612.00",
+    "discount": 28,
+    "category": "Electronics",
+    "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+    "ratings": 3.4,
+    "images": [
+      "https://source.unsplash.com/200x300/?Awesome",
+      "https://source.unsplash.com/200x300/?Awesome",
+      "https://source.unsplash.com/200x300/?Awesome",
+      "https://source.unsplash.com/200x300/?Awesome",
+      "https://source.unsplash.com/200x300/?Awesome"
+    ]
+  },
+  {
+    "name": "Incredible Rubber Cheese",
+    "price": "270.00",
+    "discount": 15,
+    "category": "Electronics",
+    "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+    "ratings": 4.2,
+    "images": [
+      "https://source.unsplash.com/200x300/?Incredible",
+      "https://source.unsplash.com/200x300/?Incredible"
+    ]
+  },
+  {
+    "name": "Intelligent Soft Chair",
+    "price": "809.00",
+    "discount": 24,
+    "category": "Electronics",
+    "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "ratings": 4.2,
+    "images": [
+      "https://source.unsplash.com/200x300/?Intelligent",
+      "https://source.unsplash.com/200x300/?Intelligent",
+      "https://source.unsplash.com/200x300/?Intelligent"
+    ]
+  },
+  {
+    "name": "Bespoke Plastic Hat",
+    "price": "587.00",
+    "discount": 18,
+    "category": "Electronics",
+    "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+    "ratings": 3.9,
+    "images": [
+      "https://source.unsplash.com/200x300/?Bespoke",
+      "https://source.unsplash.com/200x300/?Bespoke",
+      "https://source.unsplash.com/200x300/?Bespoke"
+    ]
+  },
+  {
+    "name": "Handmade Granite Gloves",
+    "price": "475.00",
+    "discount": 8,
+    "category": "Electronics",
+    "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+    "ratings": 4.1,
+    "images": [
+      "https://source.unsplash.com/200x300/?Handmade",
+      "https://source.unsplash.com/200x300/?Handmade",
+      "https://source.unsplash.com/200x300/?Handmade",
+      "https://source.unsplash.com/200x300/?Handmade"
+    ]
+  },
+  {
+    "name": "Gorgeous Bronze Fish",
+    "price": "450.00",
+    "discount": 21,
+    "category": "Electronics",
+    "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+    "ratings": 3.3,
+    "images": [
+      "https://source.unsplash.com/200x300/?Gorgeous",
+      "https://source.unsplash.com/200x300/?Gorgeous",
+      "https://source.unsplash.com/200x300/?Gorgeous",
+      "https://source.unsplash.com/200x300/?Gorgeous"
+    ]
+  },
+  {
+    "name": "Luxurious Fresh Bacon",
+    "price": "390.00",
+    "discount": 19,
+    "category": "Electronics",
+    "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+    "ratings": 4.7,
+    "images": [
+      "https://source.unsplash.com/200x300/?Luxurious",
+      "https://source.unsplash.com/200x300/?Luxurious"
+    ]
+  },
+  {
+    "name": "Licensed Rubber Fish",
+    "price": "142.00",
+    "discount": 28,
+    "category": "Electronics",
+    "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+    "ratings": 5,
+    "images": [
+      "https://source.unsplash.com/200x300/?Licensed",
+      "https://source.unsplash.com/200x300/?Licensed",
+      "https://source.unsplash.com/200x300/?Licensed",
+      "https://source.unsplash.com/200x300/?Licensed",
+      "https://source.unsplash.com/200x300/?Licensed"
+    ]
+  },
+  {
+    "name": "Intelligent Steel Soap",
+    "price": "391.00",
+    "discount": 9,
+    "category": "Electronics",
+    "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+    "ratings": 4.5,
+    "images": [
+      "https://source.unsplash.com/200x300/?Intelligent",
+      "https://source.unsplash.com/200x300/?Intelligent",
+      "https://source.unsplash.com/200x300/?Intelligent",
+      "https://source.unsplash.com/200x300/?Intelligent"
+    ]
   }
 ]
