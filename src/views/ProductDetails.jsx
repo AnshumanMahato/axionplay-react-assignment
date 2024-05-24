@@ -8,19 +8,17 @@ import {
   Button,
   Badge,
 } from '@chakra-ui/react';
+import { useContext } from 'react';
+import { AppContext } from '../contexts/AppContext';
+import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
-  /*Testing */
-  const product = {
-    image: 'https://via.placeholder.com/600',
-    name: 'Sample Product',
-    price: 150,
-    discount: 20,
-    description: 'This is a detailed description of the sample product.',
-  };
+  const { products } = useContext(AppContext);
+  const { slug } = useParams();
 
-  /*Testing */
-  const { image, name, price, discount, description } = product;
+  const product = products.find((product) => product.slug === slug);
+  console.log(slug, product);
+  const { images, name, price, discount, description } = product;
   const finalPrice = price - (price * discount) / 100;
 
   const message = encodeURIComponent(
@@ -38,12 +36,12 @@ const ProductDetails = () => {
     >
       <Flex w={{ base: '100%', md: '50%' }} gap="2rem" direction="row">
         <Box flex={1}>
-          <Image src={image} alt={name} boxSize="100%" objectFit="cover" />
+          <Image src={images[0]} alt={name} boxSize="100%" objectFit="cover" />
         </Box>
         <Flex direction="column" gap="2rem" basis="10%">
-          <Image src={image} alt={name} />
-          <Image src={image} alt={name} />
-          <Image src={image} alt={name} />
+          {images.slice(1).map((image, index) => (
+            <Image key={`${name}-${index}`} src={image} alt={name} />
+          ))}
         </Flex>
       </Flex>
       <VStack flex={1} align="start" spacing={5}>

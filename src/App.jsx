@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { path: '/', element: <Catalogue /> },
-      { path: '/product/:id', element: <ProductDetails /> },
+      { path: '/product/:slug', element: <ProductDetails /> },
     ],
   },
 ]);

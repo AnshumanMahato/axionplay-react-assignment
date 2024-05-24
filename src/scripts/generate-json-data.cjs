@@ -8,6 +8,7 @@ function generateProduct() {
   const product = {};
 
   product.name = faker.commerce.productName();
+  product.slug = faker.helpers.slugify(product.name);
   product.price = faker.commerce.price();
   product.discount = Math.floor(Math.random() * 30) + 5;
   product.category = 'Electronics';
