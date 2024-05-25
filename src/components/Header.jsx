@@ -27,12 +27,11 @@ function Header() {
           fontFamily="logo"
           direction="column"
           justify="center"
-          align="center"
           fontSize="2rem"
           lineHeight={1}
         >
-          <span>Tech</span>
-          <span>Town</span>
+          <span>Random</span>
+          <span>Store</span>
         </Flex>
         <Flex gap="2rem" align="center" justify="space-between" fontSize="2rem">
           <Link href="#">
