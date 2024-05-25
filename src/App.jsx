@@ -5,7 +5,7 @@ import ProductDetails from './views/ProductDetails';
 
 const router = createBrowserRouter([
   {
-    path: '/axionplay-assignment',
+    path: '/axionplay-react-assignment',
     element: <RootLayout />,
     children: [
       { path: '', element: <Catalogue /> },
