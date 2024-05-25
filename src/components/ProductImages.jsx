@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import { Box, Flex, Image } from '@chakra-ui/react';
-import { useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 function ProductImages({ images, alt }) {
   const [currentImage, setCurrentImage] = useState(0);
@@ -23,7 +23,8 @@ function ProductImages({ images, alt }) {
                 But this can cause issues when the images array is updated and the index of the currentImage changes.
                 That's why we are returning an empty fragment when the index matches the currentImage
            */
-          if (index === currentImage) return <></>;
+          if (index === currentImage)
+            return <React.Fragment key={`${alt}-${index}`} />;
           return (
             <Image
               key={`${alt}-${index}`}

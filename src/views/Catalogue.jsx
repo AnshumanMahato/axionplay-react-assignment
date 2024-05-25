@@ -42,8 +42,8 @@ function Catalogue() {
         gap={{ base: '2rem', sm: '4rem', xl: '8rem' }}
         w="100%"
       >
-        {products.slice(start, end).map((product) => (
-          <Link key={product.id} to={`/product/${product.slug}`}>
+        {products.slice(start, end).map((product, index) => (
+          <Link key={index} to={`product/${product.slug}`}>
             <ProductCard product={product} />
           </Link>
         ))}
