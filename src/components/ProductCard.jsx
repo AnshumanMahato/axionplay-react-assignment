@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Box, Image, Badge, Text, VStack } from '@chakra-ui/react';
+import formatCurrency from '../utils/formatCurrency';
 
 const ProductCard = ({ product }) => {
   const { images, name, price, discount } = product;
@@ -28,7 +29,7 @@ const ProductCard = ({ product }) => {
         <Text fontWeight="bold" fontSize="2rem">
           {name}
         </Text>
-        <Text fontSize="1.6rem">Price: ${finalPrice.toFixed(2)}</Text>
+        <Text fontSize="1.6rem">Price: {formatCurrency(finalPrice)}</Text>
         {discount > 0 && (
           <Badge fontSize="1.4rem" colorScheme="green">
             {discount}% off
