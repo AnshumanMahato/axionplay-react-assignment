@@ -16,7 +16,9 @@ function generateProduct() {
   product.ratings = parseFloat((Math.random() * 2 + 3).toFixed(1));
   product.images = Array.from(
     { length: parseInt(Math.random() * 4 + 2) },
-    () => `https://source.unsplash.com/200x300/?${product.name.split(' ')[0]}`,
+    () =>
+      `https://source.unsplash.com/200x300/?${parseInt(Math.random() * 100)}`,
+    //Random image urls to have different images
   );
   return product;
 }
