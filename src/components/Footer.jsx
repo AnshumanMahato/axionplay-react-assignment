@@ -17,7 +17,7 @@ function Footer() {
         justify="center"
         align="center"
       >
-        <span>© 2021 Tech Town</span>
+        <span>© 2024 Random Store</span>
       </Box>
     </Box>
   );
