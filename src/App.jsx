@@ -1,11 +1,11 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import RootLayout from './views/RootLayout';
 import Catalogue from './views/Catalogue';
 import ProductDetails from './views/ProductDetails';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: '/axionplay-react-assignment',
+    path: '/',
     element: <RootLayout />,
     children: [
       { path: '', element: <Catalogue /> },
