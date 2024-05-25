@@ -5,11 +5,11 @@ import ProductDetails from './views/ProductDetails';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/axionplay-assignment',
     element: <RootLayout />,
     children: [
-      { path: '/', element: <Catalogue /> },
-      { path: '/product/:slug', element: <ProductDetails /> },
+      { path: '', element: <Catalogue /> },
+      { path: 'product/:slug', element: <ProductDetails /> },
     ],
   },
 ]);
